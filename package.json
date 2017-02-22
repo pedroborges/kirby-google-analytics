@@ -1,0 +1,8 @@
+{
+  "name": "google-analytics",
+  "author": "Pedro Borges <oi@pedroborg.es>",
+  "version": "1.0.0",
+  "description": "Kirby Google Analytics",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
