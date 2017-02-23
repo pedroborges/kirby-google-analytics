@@ -10,7 +10,7 @@ A Kirby CMS snippet that adds the Google Analytics tracking script to your site!
 After installing the plugin using any of the methods below, add the snippet to the `site/snippet/footer` file (or anywhere in your templates):
 
 ```php
-    <?php echo snippet('google-analytics') ?>
+    <?php snippet('google-analytics') ?>
 </body>
 </html>
 ```
