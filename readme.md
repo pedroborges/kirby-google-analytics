@@ -60,6 +60,25 @@ To activate anonymous tracking (aka `anonymizeIp`):
 c::set('google.analytics.anonymize-ip', true);
 ```
 
+To add function for creating an opt-out cookie:
+
+```php
+// Anonymous tracking
+c::set('google.analytics.opt-out-cookie', true);
+```
+
+To make the opt-out available, place a link like this in your privacy policy:
+
+```html
+<a href="javascript:gaOptout()">Set opt-out cookie</a>
+```
+
+To translate the success message for the opt-out cookie:
+
+```php
+l::set('google.analytics.success-alert', 'Google Analytics tracking for this website and browser has been sucessfully disabled.');
+```
+
 ## Change Log
 All notable changes to this project will be documented at: <https://github.com/pedroborges/kirby-google-analytics/blob/master/changelog.md>
 
