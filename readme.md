@@ -53,6 +53,13 @@ In order to enable the snippet you need to set the `google.analytics` option:
 c::set('google.analytics', 'UA-98765432-1');
 ```
 
+To activate anonymous tracking (aka `anonymizeIp`):
+
+```php
+// Anonymous tracking
+c::set('google.analytics.anonymize-ip', true);
+```
+
 ## Change Log
 All notable changes to this project will be documented at: <https://github.com/pedroborges/kirby-google-analytics/blob/master/changelog.md>
 
