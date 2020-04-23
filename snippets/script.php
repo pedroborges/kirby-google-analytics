@@ -9,7 +9,7 @@
     function gaOptout() {
       document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
       window[disableStr] = true;
-      alert('<?php echo l::get('google.analytics.success-alert', 'Google Analytics tracking for this website and browser has been successfully disabled.', kirby()->site()->language()->code())?>');
+      alert('<?php echo t('google.analytics.success-alert', 'Google Analytics tracking for this website and browser has been successfully disabled.', kirby()->language()->code())?>');
     }
   <?php endif ?>
 
