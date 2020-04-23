@@ -1,7 +1,7 @@
-<?php if (c::get('google.analytics', null)) : ?>
+<?php if ($kirby->option('google.analytics', null)) : ?>
 <script>
-  <?php if (c::get('google.analytics.opt-out-cookie', null)) : ?>
-    var gaProperty = '<?= c::get("google.analytics", "") ?>';
+  <?php if ($kirby->option('google.analytics.opt-out-cookie', null)) : ?>
+    var gaProperty = '<?= $kirby->option("google.analytics", "") ?>';
     var disableStr = 'ga-disable-' + gaProperty;
     if (document.cookie.indexOf(disableStr + '=true') > -1) {
       window[disableStr] = true;
@@ -18,8 +18,8 @@
   s=b.getElementsByTagName(o)[0];e.async=1;e.src=r;s.parentNode.insertBefore(e,s)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   
-  ga('create', '<?= c::get("google.analytics", "") ?>', 'auto');
-  <?php if (c::get('google.analytics.anonymize-ip', null)) : ?>
+  ga('create', '<?= $kirby->option("google.analytics", "") ?>', 'auto');
+  <?php if ($kirby->option('google.analytics.anonymize-ip', null)) : ?>
     ga('set', 'anonymizeIp', true);
   <?php endif ?>
   ga('send', 'pageview');
