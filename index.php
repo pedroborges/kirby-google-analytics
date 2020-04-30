@@ -1,6 +1,6 @@
 <?php
 
-Kirby::plugin('minimalweb/google-analytics', [
+Kirby::plugin('pedroborges/google-analytics', [
     'snippets' => [
         'google-analytics' => __DIR__ . '/snippets/script.php'
     ],
