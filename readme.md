@@ -73,7 +73,7 @@ return [
     …
     'translations' => [
         …
-        'google.analytics.success-alert', 'Google Analytics tracking for this website and browser has been sucessfully disabled.',
+        'google.analytics.success-alert' => 'Google Analytics tracking for this website and browser has been sucessfully disabled.',
     ]
 ];
 ```
