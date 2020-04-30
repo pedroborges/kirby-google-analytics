@@ -3,19 +3,19 @@
 A Kirby CMS snippet that adds the Google Analytics tracking script to your site!
 
 ## Requirements
-- Kirby 2.4.0+
-- PHP 5.4+
+- Kirby 3.0.0+
+- PHP 7.1+
 
 ## Installation
 After installing the plugin using any of the methods below, add the snippet to the `site/snippet/footer` file (or anywhere in your templates):
 
 ```php
     <?php snippet('google-analytics') ?>
-</body>
+  </body>
 </html>
 ```
 
-> You will also need to set the `google.analytics` option (see below).
+You will also need to set the `google.analytics` option (see below).
 
 ### Download
 [Download the files](https://github.com/pedroborges/kirby-google-analytics/archive/master.zip) and place them inside `site/plugins/google-analytics`.
@@ -46,11 +46,36 @@ Updating is as easy as running a few commands.
     $ git submodule update --init --recursive
 
 ## Options
-In order to enable the snippet you need to set the `google.analytics` option:
 
 ```php
-// Google Analytics tracking code
-c::set('google.analytics', 'UA-98765432-1');
+return [
+    // Add your Google Analytics tracking code (otherwise, the plugin won't work)
+    'google.analytics' => 'UA-98765432-1',
+
+    // Activate anonymous tracking (relevant for GDPR compliance)
+    'google.analytics.anonymize-ip' => true,
+
+    // Include JavaScript function for creating an opt-out cookie
+    'google.analytics.opt-out-cookie' => true,
+];
+```
+
+To make the opt-out available, place a link like this in your privacy policy:
+
+```html
+<a href="javascript:gaOptout()">Set opt-out cookie</a>
+```
+
+To translate or change the success message for the opt-out cookie, add this to your language file(s):
+
+```php
+return [
+    …
+    'translations' => [
+        …
+        'google.analytics.success-alert' => 'Google Analytics tracking for this website and browser has been sucessfully disabled.',
+    ]
+];
 ```
 
 ## Change Log
