@@ -4,7 +4,7 @@ A Kirby CMS snippet that adds the Google Analytics tracking script to your site!
 
 ## Requirements
 - Kirby 3.0.0+
-- PHP 5.4+
+- PHP 7.1+
 
 ## Installation
 After installing the plugin using any of the methods below, add the snippet to the `site/snippet/footer` file (or anywhere in your templates):
